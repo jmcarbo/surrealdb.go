@@ -11,19 +11,19 @@ import (
 	"testing"
 	"time"
 
+	"github.com/jmcarbo/surrealdb.go/pkg/logger/slog"
+	"github.com/jmcarbo/surrealdb.go/pkg/model"
 	"github.com/stretchr/testify/assert"
-	"github.com/surrealdb/surrealdb.go/pkg/logger/slog"
-	"github.com/surrealdb/surrealdb.go/pkg/model"
 
+	"github.com/jmcarbo/surrealdb.go"
+	"github.com/jmcarbo/surrealdb.go/pkg/conn/gorilla"
+	"github.com/jmcarbo/surrealdb.go/pkg/constants"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	"github.com/surrealdb/surrealdb.go"
-	"github.com/surrealdb/surrealdb.go/pkg/conn/gorilla"
-	"github.com/surrealdb/surrealdb.go/pkg/constants"
 
-	"github.com/surrealdb/surrealdb.go/pkg/conn"
-	"github.com/surrealdb/surrealdb.go/pkg/logger"
-	"github.com/surrealdb/surrealdb.go/pkg/marshal"
+	"github.com/jmcarbo/surrealdb.go/pkg/conn"
+	"github.com/jmcarbo/surrealdb.go/pkg/logger"
+	"github.com/jmcarbo/surrealdb.go/pkg/marshal"
 )
 
 // TestDBSuite is a test s for the DB struct

@@ -3,10 +3,10 @@ package surrealdb
 import (
 	"fmt"
 
-	"github.com/surrealdb/surrealdb.go/pkg/model"
+	"github.com/jmcarbo/surrealdb.go/pkg/model"
 
-	"github.com/surrealdb/surrealdb.go/pkg/conn"
-	"github.com/surrealdb/surrealdb.go/pkg/constants"
+	"github.com/jmcarbo/surrealdb.go/pkg/conn"
+	"github.com/jmcarbo/surrealdb.go/pkg/constants"
 )
 
 // DB is a client for the SurrealDB database that holds the connection.
