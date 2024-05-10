@@ -244,11 +244,11 @@ func (ws *WebSocket) initialize() {
 			default:
 				var res rpc.RPCResponse
 				err := ws.read(&res)
+				log.Printf("error reading message: %v with ws.logger %v", err, ws.logger)
 				if err != nil {
 					if errors.Is(err, net.ErrClosed) {
 						break
 					}
-					log.Printf("error reading message: %v with ws.logger %v", err, ws.logger)
 					ws.logger.Error(err.Error())
 					continue
 				}
