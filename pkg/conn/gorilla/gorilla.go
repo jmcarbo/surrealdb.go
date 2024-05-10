@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"log"
 	"net"
 	"reflect"
 	"strconv"
@@ -247,6 +248,7 @@ func (ws *WebSocket) initialize() {
 					if errors.Is(err, net.ErrClosed) {
 						break
 					}
+					log.Printf("error reading message: %v with ws.logger %v", err, ws.logger)
 					ws.logger.Error(err.Error())
 					continue
 				}
