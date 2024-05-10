@@ -5,7 +5,6 @@ import (
 	"errors"
 	"fmt"
 	"log"
-	"net"
 	"reflect"
 	"strconv"
 	"sync"
@@ -246,11 +245,15 @@ func (ws *WebSocket) initialize() {
 				err := ws.read(&res)
 				log.Printf("error reading message: %v with ws.logger %v", err, ws.logger)
 				if err != nil {
-					if errors.Is(err, net.ErrClosed) {
-						break
-					}
-					ws.logger.Error(err.Error())
-					continue
+					/*
+						if errors.Is(err, net.ErrClosed) {
+							break
+						}
+						ws.logger.Error(err.Error())
+						continue
+
+					*/
+					break
 				}
 				go ws.handleResponse(res)
 			}
