@@ -1,6 +1,14 @@
 package conn
 
-import "github.com/jmcarbo/surrealdb.go/pkg/model"
+import (
+	"errors"
+	"github.com/jmcarbo/surrealdb.go/pkg/model"
+)
+
+var (
+	ErrTimeout           = errors.New("timeout")
+	ErrInvalidResponseID = errors.New("invalid response id")
+)
 
 type Connection interface {
 	Connect(url string) (Connection, error)
