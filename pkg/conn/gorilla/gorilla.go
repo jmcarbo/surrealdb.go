@@ -243,7 +243,6 @@ func (ws *WebSocket) initialize() {
 				var res rpc.RPCResponse
 				err := ws.read(&res)
 				if err != nil {
-					// Always break on error
 					/*
 						if errors.Is(err, net.ErrClosed) {
 							break
