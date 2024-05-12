@@ -41,10 +41,6 @@ func (db *DB) Close() error {
 	return db.conn.Close()
 }
 
-func (db *DB) Start() error {
-	return db.conn.Start()
-}
-
 // --------------------------------------------------
 
 // Use is a method to select the namespace and table to use.
